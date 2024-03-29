@@ -41,6 +41,21 @@ router9.get('/next-page-9', (req, res) => {
                 label {
                     cursor: pointer; /* Change cursor to pointer on hover over labels */
                 }
+                /* Mobile styles */
+                @media (max-width: 768px) {
+                    body {
+                        font-size: 200%; /* Double the font size */
+                        padding: 40px; /* Double the padding */
+                    }
+                    form {
+                        gap: 20px; /* Double the gap */
+                    }
+                    .continue-button, label {
+                        padding: 20px 40px; /* Double the padding */
+                        margin: 40px auto; /* Double the margin */
+                        font-size: 200%; /* Double the font size */
+                    }
+                }
             </style>
             <script>
                 // Function to update the selected option

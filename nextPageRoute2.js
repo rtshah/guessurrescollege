@@ -11,54 +11,66 @@ router2.get('/next-page-2', (req, res) => {
         <head>
             <title>Study Floor</title>
             <style>
-                /* Style for the selected label */
-                .selected {
-                    font-weight: bold;
-                }
-                /* Style for the continue button */
+                /* Existing styles */
+                .selected { font-weight: bold; }
                 .continue-button {
-                    display: block; /* Make the button block level to occupy its own line */
-                    margin: 15px auto; /* Center the button horizontally with auto margins */
-                    background-color: white; /* White background for dark mode */
-                    color: black; /* Black text for dark mode */
-                    padding: 10px 20px; /* Padding inside the button */
-                    text-decoration: none; /* Remove underline from link */
-                    border: none; /* Remove border */
-                    cursor: pointer; /* Change cursor to pointer on hover */
-                    border-radius: 10px; /* Rounded corners */
-                    font-weight: bold; /* Make the text bold */
-                    font-family: 'Times New Roman', serif; /* Set the font to Times New Roman */
+                    display: block;
+                    margin: 15px auto;
+                    background-color: white;
+                    color: black;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    font-family: 'Times New Roman', serif;
                 }
                 body {
-                    background-color: black; /* Black background for dark mode */
-                    color: white; /* White text for dark mode */
-                    padding: 10px; /* Horizontal and vertical padding */
+                    background-color: black;
+                    color: white;
+                    padding: 10px;
                 }
                 form {
                     display: grid;
-                    grid-row-gap: 5px; /* Vertical spacing between form elements */
+                    grid-row-gap: 5px;
                 }
                 label {
-                    display: block; /* Ensure labels are block level for margin to work */
-                    margin: 5px 0; /* Vertical spacing */
+                    display: block;
+                    margin: 5px 0;
                 }
-                /* Disabled button style */
                 .continue-button:disabled {
-                    background-color: grey; /* Grey background for disabled state */
-                    cursor: not-allowed; /* Change cursor to not-allowed on hover */
+                    background-color: grey;
+                    cursor: not-allowed;
+                }
+
+                /* Media query for devices with a width of less than 768px */
+                @media (max-width: 768px) {
+                    body, button, input, label, span {
+                        font-size: 200%; /* Double the font size */
+                    }
+                    .continue-button, form {
+                        padding: 20px 40px; /* Double the padding */
+                    }
+                    label {
+                        margin: 10px 0; /* Double the vertical spacing */
+                    }
+                    form {
+                        grid-row-gap: 10px; /* Double the vertical spacing between form elements */
+                    }
+                    .continue-button {
+                        margin: 30px auto; /* Double the margin around the button */
+                        padding: 20px 40px; /* Double the padding inside the button */
+                    }
                 }
             </style>
             <script>
-                // Function to update the selected option, enable continue button, and handle "5-6" animation
+                // JavaScript functions remain unchanged
                 function updateSelection(event) {
-                    // Enable the continue button when an option is selected
                     document.querySelector('.continue-button').disabled = false;
-
-                    // Remove the 'selected' class from all labels and add to the clicked one
                     document.querySelectorAll('label').forEach(label => {
                         label.classList.remove('selected');
                     });
-
                     let selectedLabel;
                     if (event.target.tagName === 'LABEL') {
                         selectedLabel = event.target;
@@ -66,20 +78,17 @@ router2.get('/next-page-2', (req, res) => {
                         selectedLabel = event.target.closest('label');
                     }
                     selectedLabel.classList.add('selected');
-
-                    // Temporarily change "5-6" to "lol dork" when selected
                     if (selectedLabel.querySelector('input').value === '5-6') {
                         selectedLabel.querySelector('span').textContent = 'lol dork';
                         setTimeout(() => {
                             selectedLabel.querySelector('span').textContent = '5-6';
-                        }, 2000); // 2 second delay before changing back
+                        }, 2000);
                     }
                 }
-
                 function continueToNextPage() {
                     const queryParams = new URLSearchParams(window.location.search);
-                    queryParams.set('college', '${college}'); // Set the college query parameter
-                    window.location.href = '/next-page-3?' + queryParams.toString(); // Redirect with the query parameters
+                    queryParams.set('college', '${college}');
+                    window.location.href = '/next-page-3?' + queryParams.toString();
                 }
             </script>
         </head>

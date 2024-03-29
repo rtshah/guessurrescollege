@@ -73,6 +73,32 @@ router.get('/next-page', (req, res) => {
                 .continue-button:hover {
                     background-color: #f0f0f0;
                 }
+
+                /* Mobile styles */
+                @media (max-width: 768px) {
+                    body {
+                        padding: 40px; /* Double the padding */
+                    }
+                    h1 {
+                        font-size: 4em; /* Double the font size */
+                        margin-bottom: 40px; /* Double the margin */
+                    }
+                    .input-group, .email-input, .email-suffix, .continue-button {
+                        font-size: 200%; /* Double the font size for input and button */
+                    }
+                    .email-input, .email-suffix {
+                        padding: 20px; /* Double the padding */
+                        border-radius: 40px 0 0 40px; /* Double the border-radius for left side */
+                    }
+                    .email-suffix {
+                        border-radius: 0 40px 40px 0; /* Double the border-radius for right side */
+                    }
+                    .continue-button {
+                        padding: 20px 40px; /* Double the padding */
+                        border-radius: 20px; /* Double the border-radius */
+                        margin: 40px auto; /* Double the margin */
+                    }
+                }
             </style>
         </head>
         <body>

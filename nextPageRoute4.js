@@ -12,65 +12,81 @@ router4.get('/next-page-4', (req, res) => {
         <head>
             <title>Multiple Choice</title>
             <style>
-                body {
-                    background-color: black; /* Dark mode background */
-                    color: white; /* White text for contrast */
-                    font-family: 'Times New Roman', serif; /* Times New Roman font for body */
-                    margin: 0;
-                    padding: 20px;
-                    text-align: center;
+            body {
+                background-color: black; /* Dark mode background */
+                color: white; /* White text for contrast */
+                font-family: 'Times New Roman', serif; /* Times New Roman font for body */
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+            }
+            .choices {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .choice-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .choice {
+                cursor: pointer;
+                transition: transform 0.2s;
+                width: 25%; /* Making the image 0.2 times its current size */
+            }
+            .choice:hover {
+                transform: scale(1.05);
+            }
+            .continue-button {
+                display: block; /* Make the button block level to occupy its own line */
+                margin: 20px auto; /* Center the button horizontally with auto margins */
+                background-color: white; /* White background */
+                color: black; /* Black text for the button */
+                padding: 10px 20px; /* Padding inside the button */
+                text-decoration: none; /* Remove underline from link */
+                border: none; /* Remove border */
+                cursor: pointer; /* Change cursor to pointer on hover */
+                font-weight: bold; /* Bold text */
+                font-family: 'Times New Roman', serif; /* Times New Roman font */
+                border-radius: 10px; /* Rounded corners */
+            }
+            .continue-button:disabled {
+                background-color: grey; /* Grey background when disabled */
+                cursor: not-allowed; /* Not-allowed cursor on hover when disabled */
+            }
+            /* Hide the default radio button */
+            .choice-radio {
+                display: none;
+            }
+            /* Custom radio button style */
+            .choice-label {
+                cursor: pointer;
+                border: 2px solid transparent;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            /* Highlighted style for selected option */
+            .choice-radio:checked + .choice-label {
+                border-color: white;
+            }
+        
+            /* Media query for devices with width less than or equal to 600px */
+            @media (max-width: 600px) {
+                body, .continue-button, .choice-label {
+                    font-size: 200%; /* Make text 2 times bigger */
                 }
                 .choices {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 10px;
-                }
-                .choice-container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    gap: 5px; /* Decrease spacing by half */
                 }
                 .choice {
-                    cursor: pointer;
-                    transition: transform 0.2s;
-                    width: 25%; /* Making the image 0.2 times its current size */
-                }
-                .choice:hover {
-                    transform: scale(1.05);
+                    width: 50%; /* Make images 2 times bigger */
                 }
                 .continue-button {
-                    display: block; /* Make the button block level to occupy its own line */
-                    margin: 20px auto; /* Center the button horizontally with auto margins */
-                    background-color: white; /* White background */
-                    color: black; /* Black text for the button */
-                    padding: 10px 20px; /* Padding inside the button */
-                    text-decoration: none; /* Remove underline from link */
-                    border: none; /* Remove border */
-                    cursor: pointer; /* Change cursor to pointer on hover */
-                    font-weight: bold; /* Bold text */
-                    font-family: 'Times New Roman', serif; /* Times New Roman font */
-                    border-radius: 10px; /* Rounded corners */
+                    padding: 20px 40px; /* Increase padding to make the button bigger */
                 }
-                .continue-button:disabled {
-                    background-color: grey; /* Grey background when disabled */
-                    cursor: not-allowed; /* Not-allowed cursor on hover when disabled */
-                }
-                /* Hide the default radio button */
-                .choice-radio {
-                    display: none;
-                }
-                /* Custom radio button style */
-                .choice-label {
-                    cursor: pointer;
-                    border: 2px solid transparent;
-                    padding: 5px;
-                    border-radius: 5px;
-                }
-                /* Highlighted style for selected option */
-                .choice-radio:checked + .choice-label {
-                    border-color: white;
-                }
-            </style>
+            }
+        </style>
             <script>
                 function selectOption(event) {
                     document.querySelectorAll('.choice-label').forEach(label => {

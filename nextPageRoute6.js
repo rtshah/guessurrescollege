@@ -50,6 +50,24 @@ router6.get('/next-page-6', (req, res) => {
                     background-color: grey;
                     cursor: not-allowed;
                 }
+                /* Media query for mobile devices */
+                @media (max-width: 768px) {
+                    body {
+                        font-size: 200%; /* Increase font size */
+                        padding: 40px; /* Increase padding */
+                    }
+                    .options-container {
+                        gap: 20px; /* Increase spacing between options */
+                    }
+                    label {
+                        font-size: 200%; /* Increase font size for better readability */
+                    }
+                    .continue-button {
+                        margin-top: 40px; /* Increase spacing above the button */
+                        padding: 20px 40px; /* Increase padding for a larger button */
+                        font-size: 200%; /* Increase font size for the text inside the button */
+                    }
+                }
             </style>
             <script>
                 function updateSelection(event) {

@@ -55,6 +55,24 @@ router3.get('/next-page-3', (req, res) => {
                     margin-bottom: 10px; /* Spacing below each label */
                     display: inline-block; /* Ensure labels are in line */
                 }
+
+                /* Media query for devices with a max-width of 768px */
+                @media (max-width: 768px) {
+                    body {
+                        padding: 40px; /* Double the padding */
+                        font-size: 200%; /* Double the font size */
+                    }
+                    .form-container, .options-container, label, .continue-button {
+                        font-size: 200%; /* Double the font size for better readability */
+                    }
+                    .continue-button {
+                        padding: 20px 40px; /* Double the padding inside the button */
+                        margin: 40px auto; /* Double the margin around the button */
+                    }
+                    label {
+                        margin-bottom: 20px; /* Double the spacing below each label */
+                    }
+                }
             </style>
             <script>
                 function updateSelection(event) {

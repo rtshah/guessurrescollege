@@ -64,6 +64,23 @@ router8.get('/next-page-8', (req, res) => {
                     font-weight: bold; /* Bold text for the button */
                     font-family: 'Times New Roman', serif; /* Times New Roman font for the button */
                 }
+
+                /* Media query for mobile devices */
+                @media (max-width: 600px) {
+                    body {
+                        padding: 20px; /* Increase padding */
+                    }
+                    .choice, .continue-button {
+                        padding: 16px; /* Double the padding */
+                        font-size: 200%; /* Double the font size */
+                    }
+                    .choices {
+                        gap: 20px; /* Double the gap */
+                    }
+                    .image-box img, .smaller-image img {
+                        width: 100%; /* Increase image size */
+                    }
+                }
             </style>
             <script>
                 function selectOption(event) {

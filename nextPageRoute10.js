@@ -32,6 +32,18 @@ router10.get('/next-page-10', (req, res) => {
           .accuracy-text {
             font-size: 1em; /* Smaller font size than the header */
           }
+          /* Media query for devices with a width of less than 768px */
+          @media (max-width: 768px) {
+            body {
+              padding: 40px; /* 2x larger padding */
+            }
+            h1, p {
+              font-size: 4em; /* 2x larger font size for h1 and p */
+            }
+            .accuracy-text {
+              font-size: 2em; /* 2x larger font size for accuracy text */
+            }
+          }
         </style>
       </head>
       <body>

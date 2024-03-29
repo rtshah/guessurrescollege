@@ -58,6 +58,22 @@ router7.get('/next-page-7', (req, res) => {
                     margin-top: 20px; /* Spacing above the text */
                     text-align: left; /* Align info text to the left */
                 }
+
+                /* Media query for devices with a width of less than 768px */
+                @media (max-width: 768px) {
+                    body {
+                        font-size: 200%; /* Double the font size */
+                        padding: 40px; /* Double the padding */
+                    }
+                    .options-container, .button-container, .info-text {
+                        margin-bottom: 20px; /* Double the margin-bottom */
+                    }
+                    .continue-button, label {
+                        padding: 20px 40px; /* Double the padding */
+                        margin-bottom: 20px; /* Double the margin-bottom */
+                        font-size: 200%; /* Double the font size */
+                    }
+                }
             </style>
             <script>
                 function updateSelection(event) {

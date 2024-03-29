@@ -18,45 +18,63 @@ app.use(express.urlencoded({ extended: true }));
 // Main route
 app.get('/', (req, res) => {
     res.send(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Guess College</title>
-            <style>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Guess College</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+            }
+            h1, .additional-header {
+                font-weight: bold;
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            h2 {
+                margin-bottom: 20px;
+                font-weight: normal;
+            }
+            .continue-button {
+                background-color: white;
+                color: black;
+                padding: 10px 20px;
+                text-decoration: none;
+                border: none;
+                cursor: pointer;
+                border-radius: 10px;
+                display: inline-block;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .continue-button:hover {
+                background-color: #f0f0f0;
+            }
+            /* Media query for devices with a max width of 768px */
+            @media (max-width: 768px) {
                 body {
-                    background-color: black; /* Dark mode background */
-                    color: white; /* Light mode text for contrast */
-                    margin: 0;
-                    padding: 20px;
-                    text-align: center; /* Center-align content */
+                    padding: 40px; /* Double the padding */
                 }
                 h1, .additional-header {
-                    font-weight: bold; /* Make main headers bold */
-                    font-size: 2em; /* Larger font size for main header */
-                    margin-bottom: 20px; /* Add 20px spacing below each header */
+                    font-size: 4em; /* Double the font size */
+                    margin-bottom: 40px; /* Double the margin */
                 }
                 h2 {
-                    margin-bottom: 20px; /* Add 20px spacing below subheaders */
-                    font-weight: normal; /* Subheaders are not bold */
+                    margin-bottom: 40px; /* Double the margin */
                 }
                 .continue-button {
-                    background-color: white; /* Button background */
-                    color: black; /* Button text color */
-                    padding: 10px 20px; /* Padding inside the button */
-                    text-decoration: none;
-                    border: none; /* Remove border */
-                    cursor: pointer; /* Change cursor to pointer on hover */
-                    border-radius: 10px; /* Rounded corners */
-                    display: inline-block; /* Necessary for margins to work */
-                    font-weight: bold; /* Make button text bold */
-                    margin-bottom: 20px; /* Add spacing below the button */
+                    padding: 20px 40px; /* Double the padding */
+                    margin-bottom: 40px; /* Double the margin */
+                    border-radius: 20px; /* Double the border radius */
                 }
-                .continue-button:hover {
-                    background-color: #f0f0f0; /* Lighter background on hover */
-                }
-            </style>
-        </head>
-        <body>
+            }
+        </style>
+    </head>
+    <body>
             <h1>Watch ⏱️ me 👀 guess❓your 🫵 res 😹 college 📚</h1>
             <h2>brought to you by wejustwnahvfun LLC 🧏‍♂️🧏‍♂️🧏‍♂️</h2>
             <a href="/next-page" class="continue-button">Continue</a>

@@ -61,6 +61,21 @@ router5.get('/next-page-5', (req, res) => {
                 .hidden-radio {
                     display: none; /* Hide the radio input */
                 }
+                /* Mobile styles */
+                @media (max-width: 768px) {
+                    body, .choice, .homebodie-text, .continue-button {
+                        transform: scale(2); /* Make elements 2x bigger */
+                    }
+                    .choices {
+                        gap: 20px; /* Increase gap for better spacing */
+                    }
+                    .choice, .homebodie-text {
+                        margin-bottom: 10px; /* Increase spacing below the image or text */
+                    }
+                    .continue-button {
+                        padding: 20px 40px; /* Increase padding inside the button */
+                    }
+                }    
             </style>
             <script>
                 function selectOption(choice) {
