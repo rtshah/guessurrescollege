@@ -1,0 +1,17 @@
+{
+  "name": "guessurrescollege",
+  "version": "1.0.0",
+  "description": "guess ur res college",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@firebase/database": "^1.0.3",
+    "express": "^4.19.1",
+    "firebase": "^10.9.0",
+    "firebase-admin": "^12.0.0"
+  }
+}

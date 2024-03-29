@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "guessrescollege",
+    "wecanguessurRescollege": "guessrescollege"
+  },
+  "targets": {},
+  "etags": {}
+}
