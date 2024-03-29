@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 const nextPageRoute = require('./nextPageRoute'); 
 const nextPageRoute2 = require('./nextPageRoute2'); 
 const nextPageRoute3 = require('./nextPageRoute3'); 
