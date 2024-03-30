@@ -10,6 +10,9 @@ router6.get('/next-page-6', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
+
             <title>servery</title>
             <style>
                 body {
@@ -53,19 +56,19 @@ router6.get('/next-page-6', (req, res) => {
                 /* Media query for mobile devices */
                 @media (max-width: 768px) {
                     body {
-                        font-size: 200%; /* Increase font size */
+                        font-size: 100%; /* Increase font size */
                         padding: 40px; /* Increase padding */
                     }
                     .options-container {
                         gap: 20px; /* Increase spacing between options */
                     }
                     label {
-                        font-size: 200%; /* Increase font size for better readability */
+                        font-size: 100%; /* Increase font size for better readability */
                     }
                     .continue-button {
                         margin-top: 40px; /* Increase spacing above the button */
-                        padding: 20px 40px; /* Increase padding for a larger button */
-                        font-size: 200%; /* Increase font size for the text inside the button */
+                        padding: 10px 20px; /* Increase padding for a larger button */
+                        font-size: 100%; /* Increase font size for the text inside the button */
                     }
                 }
             </style>

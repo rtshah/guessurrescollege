@@ -9,6 +9,9 @@ router3.get('/next-page-3', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
+
             <title>Smash or Pass</title>
             <style>
                 body {
@@ -59,18 +62,20 @@ router3.get('/next-page-3', (req, res) => {
                 /* Media query for devices with a max-width of 768px */
                 @media (max-width: 768px) {
                     body {
-                        padding: 40px; /* Double the padding */
-                        font-size: 200%; /* Double the font size */
+                        padding: 20px; /* Double the padding from the initial mobile adjustment */
+                        font-size: 100%; /* Double the font size from the initial mobile adjustment */
                     }
-                    .form-container, .options-container, label, .continue-button {
-                        font-size: 200%; /* Double the font size for better readability */
+                    .form-container, .options-container, .continue-button {
+                        font-size: 100%; /* Double the font size for better readability */
                     }
                     .continue-button {
                         padding: 20px 40px; /* Double the padding inside the button */
                         margin: 40px auto; /* Double the margin around the button */
+                        border-radius: 20px; /* Adjusted to maintain the visual impact of the corner radius */
                     }
                     label {
-                        margin-bottom: 20px; /* Double the spacing below each label */
+                        font-size: 200%; /* Double the font size for multiple choice options */
+                        margin-bottom: 10px; /* Double the spacing below each label */
                     }
                 }
             </style>

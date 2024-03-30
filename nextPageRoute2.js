@@ -2,16 +2,16 @@ const express = require('express');
 const router2 = express.Router();
 
 router2.get('/next-page-2', (req, res) => {
-    // Capture the college query parameter
     const college = req.query.college;
 
     res.send(`
         <!DOCTYPE html>
         <html>
         <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
             <title>Study Floor</title>
             <style>
-                /* Existing styles */
                 .selected { font-weight: bold; }
                 .continue-button {
                     display: block;
@@ -43,40 +43,40 @@ router2.get('/next-page-2', (req, res) => {
                     background-color: grey;
                     cursor: not-allowed;
                 }
-
                 /* Media query for devices with a width of less than 768px */
                 @media (max-width: 768px) {
-                    body, button, input, label, span {
-                        font-size: 200%; /* Double the font size */
+                    body, button, input, span {
+                        font-size: 200%;
+                    }
+                    h1 {
+                        font-size: 100%;
+                    }
+                    label, label span {
+                        font-size: 75%;
+                        margin: 10px 0;
                     }
                     .continue-button, form {
-                        padding: 20px 40px; /* Double the padding */
-                    }
-                    label {
-                        margin: 10px 0; /* Double the vertical spacing */
-                    }
-                    form {
-                        grid-row-gap: 10px; /* Double the vertical spacing between form elements */
+                        padding: 20px 40px;
                     }
                     .continue-button {
-                        margin: 30px auto; /* Double the margin around the button */
-                        padding: 20px 40px; /* Double the padding inside the button */
+                        font-size: 100%;
+                        padding: 10px 20px;
+                        margin: 30px auto;
+                    }
+                    form {
+                        grid-row-gap: 10px;
                     }
                 }
             </style>
             <script>
-                // JavaScript functions remain unchanged
                 function updateSelection(event) {
                     document.querySelector('.continue-button').disabled = false;
                     document.querySelectorAll('label').forEach(label => {
                         label.classList.remove('selected');
+                        // Ensure no inline font size styles are set
+                        label.style.fontSize = ''; 
                     });
-                    let selectedLabel;
-                    if (event.target.tagName === 'LABEL') {
-                        selectedLabel = event.target;
-                    } else {
-                        selectedLabel = event.target.closest('label');
-                    }
+                    let selectedLabel = event.target.tagName === 'LABEL' ? event.target : event.target.closest('label');
                     selectedLabel.classList.add('selected');
                     if (selectedLabel.querySelector('input').value === '5-6') {
                         selectedLabel.querySelector('span').textContent = 'lol dork';

@@ -9,6 +9,9 @@ router7.get('/next-page-7', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
+
             <title>Choices</title>
             <style>
                 body {
@@ -62,16 +65,16 @@ router7.get('/next-page-7', (req, res) => {
                 /* Media query for devices with a width of less than 768px */
                 @media (max-width: 768px) {
                     body {
-                        font-size: 200%; /* Double the font size */
+                        font-size: 100%; /* Double the font size */
                         padding: 40px; /* Double the padding */
                     }
                     .options-container, .button-container, .info-text {
                         margin-bottom: 20px; /* Double the margin-bottom */
                     }
                     .continue-button, label {
-                        padding: 20px 40px; /* Double the padding */
+                        padding: 10px 20px; /* Double the padding */
                         margin-bottom: 20px; /* Double the margin-bottom */
-                        font-size: 200%; /* Double the font size */
+                        font-size: 100%; /* Double the font size */
                     }
                 }
             </style>

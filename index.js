@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3001;
-const nextPageRoute = require('./nextPageRoute'); 
-const nextPageRoute2 = require('./nextPageRoute2'); 
-const nextPageRoute3 = require('./nextPageRoute3'); 
-const nextPageRoute4 = require('./nextPageRoute4'); 
+const port = process.env.PORT || 3005;
+const nextPageRoute = require('./nextPageRoute');
+const nextPageRoute2 = require('./nextPageRoute2');
+const nextPageRoute3 = require('./nextPageRoute3');
+const nextPageRoute4 = require('./nextPageRoute4');
 const nextPageRoute5 = require('./nextPageRoute5');
 const nextPageRoute6 = require('./nextPageRoute6');
 const nextPageRoute7 = require('./nextPageRoute7');
@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
     <!DOCTYPE html>
     <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Guess College</title>
         <style>
             body {
@@ -57,13 +58,14 @@ app.get('/', (req, res) => {
             /* Media query for devices with a max width of 768px */
             @media (max-width: 768px) {
                 body {
-                    padding: 40px; /* Double the padding */
+                    padding: 80px; /* Double the padding */
                 }
                 h1, .additional-header {
-                    font-size: 4em; /* Double the font size */
+                    font-size: 2em; /* Double the font size */
                     margin-bottom: 40px; /* Double the margin */
                 }
                 h2 {
+                    font-size: 1em; /* Double the font size */
                     margin-bottom: 40px; /* Double the margin */
                 }
                 .continue-button {
@@ -96,8 +98,6 @@ app.use(nextPageRoute7);
 app.use(nextPageRoute8);
 app.use(nextPageRoute9);
 app.use(nextPageRoute10);
-
-
 
 const server = app.listen(port, () => console.log(`Server is running on http://localhost:${port}`));
 server.keepAliveTimeout = 120 * 1000;

@@ -24,8 +24,38 @@ router.get('/next-page', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
             <title>Next Page</title>
             <style>
+            /* Mobile styles */
+            @media (max-width: 768px) {
+                body {
+                    padding: 20px; /* Slight increase in padding for mobile */
+                }
+                h1 {
+                    font-size: 3em; /* Increase the font size for mobile but not too large */
+                    margin-bottom: 40px; /* Increased bottom margin */
+                }
+                .input-group, .email-input, .email-suffix, .continue-button {
+                    font-size: 150%; /* Increase font size by 50% for visibility */
+                }
+                .email-input, .email-suffix {
+                    padding: 15px; /* Slightly larger padding */
+                    border-radius: 30px 0 0 30px; /* Slightly larger border-radius */
+                }
+                .email-suffix {
+                    border-radius: 0 30px 30px 0; /* Slightly larger border-radius */
+                }
+                .continue-button {
+                    padding: 15px 30px; /* Slightly larger padding */
+                    border-radius: 15px; /* Slightly larger border-radius */
+                    margin: 40px auto; /* Increased margin to add space around the button */
+                }
+                .email-input {
+                    width: 50%; /* Half the width of the text input field for mobile */
+                }
+            }            
                 body {
                     background-color: black;
                     color: white;
@@ -74,31 +104,7 @@ router.get('/next-page', (req, res) => {
                     background-color: #f0f0f0;
                 }
 
-                /* Mobile styles */
-                @media (max-width: 768px) {
-                    body {
-                        padding: 40px; /* Double the padding */
-                    }
-                    h1 {
-                        font-size: 4em; /* Double the font size */
-                        margin-bottom: 40px; /* Double the margin */
-                    }
-                    .input-group, .email-input, .email-suffix, .continue-button {
-                        font-size: 200%; /* Double the font size for input and button */
-                    }
-                    .email-input, .email-suffix {
-                        padding: 20px; /* Double the padding */
-                        border-radius: 40px 0 0 40px; /* Double the border-radius for left side */
-                    }
-                    .email-suffix {
-                        border-radius: 0 40px 40px 0; /* Double the border-radius for right side */
-                    }
-                    .continue-button {
-                        padding: 20px 40px; /* Double the padding */
-                        border-radius: 20px; /* Double the border-radius */
-                        margin: 40px auto; /* Double the margin */
-                    }
-                }
+                
             </style>
         </head>
         <body>

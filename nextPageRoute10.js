@@ -12,6 +12,9 @@ router10.get('/next-page-10', (req, res) => {
       <!DOCTYPE html>
       <html>
       <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
+
         <title>College Information</title>
         <style>
           body {
@@ -38,10 +41,10 @@ router10.get('/next-page-10', (req, res) => {
               padding: 40px; /* 2x larger padding */
             }
             h1, p {
-              font-size: 4em; /* 2x larger font size for h1 and p */
+              font-size: 2em; /* 2x larger font size for h1 and p */
             }
             .accuracy-text {
-              font-size: 2em; /* 2x larger font size for accuracy text */
+              font-size: 1.5em; /* 2x larger font size for accuracy text */
             }
           }
         </style>

@@ -10,6 +10,9 @@ router4.get('/next-page-4', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
+
             <title>Multiple Choice</title>
             <style>
             body {
@@ -74,7 +77,7 @@ router4.get('/next-page-4', (req, res) => {
             /* Media query for devices with width less than or equal to 600px */
             @media (max-width: 600px) {
                 body, .continue-button, .choice-label {
-                    font-size: 200%; /* Make text 2 times bigger */
+                    font-size: 100%; /* Make text 2 times bigger */
                 }
                 .choices {
                     gap: 5px; /* Decrease spacing by half */
@@ -83,7 +86,7 @@ router4.get('/next-page-4', (req, res) => {
                     width: 50%; /* Make images 2 times bigger */
                 }
                 .continue-button {
-                    padding: 20px 40px; /* Increase padding to make the button bigger */
+                    padding: 10px 20px; /* Increase padding to make the button bigger */
                 }
             }
         </style>

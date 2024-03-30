@@ -8,6 +8,9 @@ router8.get('/next-page-8', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
+
             <title>Location Choice</title>
             <style>
                 body {
@@ -71,8 +74,8 @@ router8.get('/next-page-8', (req, res) => {
                         padding: 20px; /* Increase padding */
                     }
                     .choice, .continue-button {
-                        padding: 16px; /* Double the padding */
-                        font-size: 200%; /* Double the font size */
+                        padding: 8px; /* Double the padding */
+                        font-size: 100%; /* Double the font size */
                     }
                     .choices {
                         gap: 20px; /* Double the gap */
@@ -103,7 +106,7 @@ router8.get('/next-page-8', (req, res) => {
             </script>
         </head>
         <body>
-            <h1>where would I most likely find 🧐🕵️‍♂️ you (tricky 🥶 because i isn't 🤓 a being 😹, yet 😱)</h1>
+            <h1>where would i most likely find 🧐🕵️‍♂️ you (tricky 🥶 because i isn't 🤓 a being 😹, yet 😱)</h1>
             <div class="choices">
                 <div class="choice smaller-image" onclick="selectOption(event)">
                     <span>brochstein</span>

@@ -9,6 +9,9 @@ router9.get('/next-page-9', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
+
             <title>Most Attractive Major</title>
             <style>
                 body {
@@ -41,19 +44,24 @@ router9.get('/next-page-9', (req, res) => {
                 label {
                     cursor: pointer; /* Change cursor to pointer on hover over labels */
                 }
-                /* Mobile styles */
                 @media (max-width: 768px) {
                     body {
-                        font-size: 200%; /* Double the font size */
-                        padding: 40px; /* Double the padding */
+                        font-size: 100%; /* Double the font size */
+                        padding: 20px; /* Double the padding */
                     }
                     form {
-                        gap: 20px; /* Double the gap */
+                        gap: 10px; /* Adjust the gap if needed */
                     }
                     .continue-button, label {
-                        padding: 20px 40px; /* Double the padding */
-                        margin: 40px auto; /* Double the margin */
-                        font-size: 200%; /* Double the font size */
+                        padding: 10px 20px; /* Double the padding */
+                        margin: 20px auto; /* Decrease the margin to reduce spacing */
+                        font-size: 100%; /* Double the font size */
+                    }
+                    label {
+                        display: block; /* Make labels block elements to ensure they align correctly */
+                        margin-bottom: 0px; /* Decrease the bottom margin to reduce spacing between elements */
+                        text-align: left; /* Align text to the left */
+
                     }
                 }
             </style>

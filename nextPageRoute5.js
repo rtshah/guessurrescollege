@@ -10,6 +10,9 @@ router5.get('/next-page-5', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport meta tag -->
+
             <title>Multiple Choice</title>
             <style>
                 body {
@@ -61,21 +64,29 @@ router5.get('/next-page-5', (req, res) => {
                 .hidden-radio {
                     display: none; /* Hide the radio input */
                 }
-                /* Mobile styles */
                 @media (max-width: 768px) {
                     body, .choice, .homebodie-text, .continue-button {
-                        transform: scale(2); /* Make elements 2x bigger */
+                        /* Ensure other mobile-specific styles are retained */
                     }
                     .choices {
-                        gap: 20px; /* Increase gap for better spacing */
+                        gap: 30px; /* Adjust if necessary to accommodate larger images */
                     }
-                    .choice, .homebodie-text {
-                        margin-bottom: 10px; /* Increase spacing below the image or text */
+                    .choice {
+                        transform: scale(1.8); /* Scale images to 1.5 times their size */
+                        margin-bottom: 30px; /* Increase spacing below the scaled image */
+                    }
+                    .homebodie-text {
+                        /* Apply any specific mobile styles for the text option here */
                     }
                     .continue-button {
-                        padding: 20px 40px; /* Increase padding inside the button */
+                        padding: 10px 20px; /* Adjust padding as needed */
                     }
-                }    
+                    h1 {
+                        font-size: 24px; /* Ensure the title is visible and legible */
+                        word-wrap: break-word; /* Prevent long words from overflowing */
+                        padding: 0 20px; /* Prevent text from touching the screen edges */
+                    }
+                }
             </style>
             <script>
                 function selectOption(choice) {
